@@ -1,0 +1,764 @@
+body{
+    background-color:#fef5ac;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Bodoni MT", "Didot";
+}
+.header{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    top: 0;
+    left: 0;
+    height: 70px;
+    max-height: 100%;
+    width: 100%;
+    background-color: #01111d65;
+    transition: background-color .5s;
+    box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    z-index: 1000;
+}
+
+.header:hover{
+    background-color: #01111d8e;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding:.8rem 2.8rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border:.2rem solid #01111D;
+    cursor: pointer;
+    background: none;
+    color:#01111D;
+    font-size: 1.7rem;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    height: 50px;
+}
+    .btn::before{
+      content: '';
+      position: absolute;
+      top:0; left:0;
+      height: 100%;
+      width:100%;
+      background: #01111D;
+      z-index: -1;
+      transition: .2s linear;
+      clip-path: circle(0% at 0% 5%);
+    }
+  
+    .btn:hover::before{
+      clip-path: circle(100%);
+      color: #fef5ac;
+    }
+  
+    .btn:hover{
+      color: #fef5ac;
+    }
+  
+  @keyframes fadeIn {
+    0%{
+      transform: translateY(3rem);
+      opacity: 0;
+    }
+  }
+  .to{
+    display: flex;
+    flex-direction: row;
+  }
+.header .logo{
+    padding-top: 10px;
+    height: 60px;
+}
+.header .name 
+.pet{
+    color: #25316d;
+}
+.header .name 
+.ter{
+    color: #fef5ac;
+}
+.header .logo-name h1{
+    display: flex;
+    font-size: xx-large;
+}
+.nav-link{
+    display: flex;
+    padding-top: 5px;
+    justify-content: center;
+    margin-left: 100px;
+}
+.nav-link a{
+    text-decoration: none;
+    color: #01111D;
+    font-size:large;
+    font-family:'Didot';
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px;
+    width: 120px;
+    transition: background-color .5s ease-in-out;
+    border-radius: 10px;;
+}
+.log{
+    display: flex;
+    justify-content: center;
+    padding:-16px 0px;
+}
+.log a{
+    color:#01111D;
+}
+.log a:hover{
+    color:#fef5ac;
+}
+ .header .nav-link a:hover{
+    background-color: #97d2ec48;
+}
+.login-form{
+    position: sticky;
+    height:400px;
+    width: 350px;
+    font-family: 'Didot';
+    text-transform: capitalize;
+    background-color: #97d2ecab;
+    border-radius: 10px;
+    margin-left: 65%;
+    top:11%;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: -400px;
+}
+.login-form h3{
+    text-align: center;
+    font-family: 'Bodoni';
+    color:#01111D;
+}
+.login-form:target{
+    opacity: 1;
+    visibility: visible;
+}
+.lo{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #01111D;
+    font-size: 20px;
+    font-family: 'Didot';
+    padding:1.5rem 0;
+    margin:5px;
+    height: 20px;
+    color:#01111D;
+}
+.login-form input{
+    color:#01111D;
+}
+.remember{
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    padding:1rem 0;
+}
+.remember label{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color:#01111D;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login-form .bts{
+    width: 100%;
+    text-transform: capitalize;
+}
+.links a{
+    font-size: 15px;
+    color:#01111D;
+}
+.links a:hover{
+    color:#25316d;
+    text-decoration: underline;
+    }
+.cls{
+    position: absolute;
+    top: .5%;
+    right: 1.5%;
+
+}
+.bs{
+    font-size: 40px;
+    background-color: transparent;
+    color:#01111D;
+    border: none;
+    transition: .3s;
+}
+.bs:hover{
+    color:#fef5ac;
+    cursor: pointer;
+}
+.wave {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.wave img{
+    height: 700px;
+    width: 100%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+.wave .explain{
+    position: absolute;
+    background-color: #fef4ac28;
+    width: 500px;
+    text-align: justify;
+    top: 200px;
+    right: 90px;
+    border-radius: 20px;
+}
+.explain p{
+    white-space: pre;
+    font-family: "Bodoni MT";
+    font-size: 60px;
+    line-height: 5pc;
+    color:#01111D
+}
+.prods{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top:700px;
+    justify-content: center;
+    width: 100%;
+}
+ .pr{
+    position: relative;
+     font-size: 50px;
+     width: 100%;
+     text-align: center;
+     font-family: 'Didot';
+     border-bottom: 2px solid #01111D;
+    }
+    .our{
+        color:#01111D;
+    }
+ .pro{
+        color:#25316d;
+    }
+.prods .pd{
+    text-align: left;
+    word-spacing: 6px;
+font-size: 25px;
+color: #25316d;
+}
+.dog-type{
+    width: 300px;
+    height:300px;
+    background-color: #25316d;
+    border: 1px solid;
+    border-radius: 150px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-rows: 85px 1fr;
+    box-shadow: 5px 5px 40px 5px #25316d;
+    margin-left: 60px;
+    transition: .5s;
+}
+.dog-type:hover{
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+}
+.types{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.text{
+    padding-top:10px;
+    text-align: center;
+    font-size: 30px;
+    color: #fef5ac;
+    
+}
+ .in-dog-type{
+    background-image: url("dog_PNG2410.png");
+    background-size: cover;
+    width:200px;
+    height:200px;
+    border-radius: 50px;
+ }
+ .in-cat-type{
+    background-image: url("Cat-Transparent-Images-1.png");
+    background-size: cover;
+    width:200px;
+    height:200px;
+    border-radius: 50px;
+    margin-left: 70px;
+ }
+ .in-fish-type{
+    background-image: url("fishs.png");
+    background-size: cover;
+    background-position: left;
+    width:200px;
+    height:200px;
+    border-radius: 50px;
+
+ }
+ *{
+    box-sizing: border-box;
+ }
+
+ .dogs{
+    height:200px;
+    width: 100%;;
+ }
+ .all-products{
+    position: relative;
+    padding-top: 50px;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    margin-bottom: -600px;
+    justify-content:center;
+ }
+
+.shop-dog{
+    background-color: #97d2ec;
+    height: 100px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    box-shadow: 0px 0px 40px #97d2ec;
+    border-radius: 20px;
+    width: 500px;
+    align-content: center;
+}
+.shop-dog .dog-text{
+    font-size: 50pt;
+    font-family: 'Didot';
+    margin: -50px 0px -66px 0px;
+    color: #01111D;
+}
+
+.container{
+    display: flex;
+    overflow-x: scroll;
+    margin-top: 50px;
+    height: 500px;
+    padding:24px;
+    width: 1250px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    border-radius: 8px;
+    gap: 12px;
+    border: 2px solid #01111D;
+ }
+ .all-products .left-butt{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 2000;
+    top: 20%;
+    background-color: #01111d3f;
+    border: none;
+    color: #fef5ac;
+    font-size: 40px;
+    transition: color .5s;
+ }
+ .all-products .right-butt{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    z-index: 2000;
+    right:0;
+    top: 20%;
+    background-color: #01111d3f;
+    border: none;
+    color: #fef5ac;
+    font-size: 40px;
+    transition: color .5s;
+ }
+ .left-butt:hover{
+    color: #01111D;
+    background-color: #01111da5;
+    cursor: pointer;
+ }
+ .right-butt:hover{
+    color: #01111D;
+    background-color: #01111da5;
+    cursor: pointer;
+ }
+ .container .items{
+    flex: 0 0 500px;
+    padding: 24px;
+    border-radius: 20px;
+    width:50px;
+    z-index: 1;
+    scroll-snap-align: start;
+    background-color: #25316d;
+ }
+ .card{
+    border-radius: 25px;
+    background-color: #fef5ac;
+  }
+  .image-content,
+  .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  .image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+  }
+  .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #97d2ec;
+    border-radius: 25px 25px 0 25px;
+  }
+  .overlay::before,
+  .overlay::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #97d2ec;
+  }
+  .buts{
+    display: flex;
+    flex-direction: row;
+  }
+  .overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #fef5ac;
+  }
+  .card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+    background: #fef5ac;
+    padding: 3px;
+    transition: 0.5s;
+  }
+ .card-image .c-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+    transition: 0.5s;
+}
+  .card-image:hover{
+    border-radius: 50%;
+  }
+  .card-image .c-image:hover{
+    border-radius: 50%;;
+  }
+  .card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070F4;
+  }
+  .name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #01111D;
+    font-family: 'Bodoni';
+  }
+  .description{
+    font-size: 14px;
+    color: #01111D;
+    text-align: center;
+    font-family: 'Didot';
+  }
+  .button{
+    border: none;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #25316d;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .button:hover{
+    background: #97d2ec;
+    color: #01111D;
+  }
+
+  .about-content{
+    position: relative;
+    margin-top: 700px;
+    width:100%;
+  }
+  .cons{
+    display: flex;
+    flex-direction: row;
+  }
+  .about-content-image{
+    width:100%;
+    height:500px;
+    opacity: .9;
+    border-radius: 10%;
+    
+  }
+  .about-content-image:hover{
+    animation: happy 5s infinite;
+  }
+  @keyframes happy {
+    0%{
+      border-radius: 20% 30% 20% 50%;
+    }
+    20%{
+      border-radius: 50% 30% 10% 60%;
+    }
+    40%{
+      border-radius: 70% 20% 30% 12% / 40% 48% 20% 70%;
+    }
+    60%{
+      border-radius: 40% 20% 90% 1% / 50% 20% 70% 23%;
+    }
+    80%{
+      border-radius: 20% 50% 20% 10%;
+    }
+    100%{
+      border-radius: 20% 30% 20% 50%;
+    }
+  }
+
+  .about-text h1, p{
+    font-family: 'Didot';
+    color: #01111D;
+  }
+  .mo{
+    font-weight: bold;
+    color: #25316d;
+  }
+  .about-text{
+    background-color: #97d2eca8;
+    border-radius: 40px;
+    position: absolute;
+    height:300px;
+    width:500px;
+    top: 35%;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 5px 5px 20px #97d2ec8c;
+  }
+  .services .box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+    .box{
+      background: #97d2ec;
+      padding:3rem;
+      text-align: center;
+      border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+      transition: 0.5s;
+    }
+      .box:nth-child(even){
+        border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
+      }
+  
+      .box:hover{
+        border-radius: .5rem;
+      }
+  
+      .box >i{
+        height:6.5rem;
+        width:6.5rem;
+        line-height:6.5rem;
+        font-size: 3rem;
+        color: white;
+        background: #01111D;
+        border-radius: 50%;
+        margin-bottom: .5rem;
+      }
+  
+      .box h3, a{
+        font-size: 2.2rem;
+        color:black;
+        padding:1rem 0;
+        font-family: 'Didot';
+        text-transform: uppercase;
+      }
+      .contact{
+        padding:2rem 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap:3rem;
+      }
+      .contact  .image{
+          flex:.5 30rem;
+      }
+      .image img{
+            width: 30rem;
+          }
+    form{
+        display: flex;
+        width: 20rem;
+        flex-direction: column;
+        margin-left: 30px;
+        align-self: start;
+        border-left: 2px solid #01111D;
+        padding-left: 20px;
+    } 
+          h3{
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            color:#01111D;
+          }
+      
+          .xa, textarea{
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #01111D;
+            border-width: .1rem;
+            font-size: 20px;
+            text-transform: none;
+            background-color: #fef5ac;
+            color:#01111D;
+            padding:1.5rem 0;
+            margin:5px;
+            height: 20px;
+            text-transform: capitalize;
+            font-family: 'Didot';
+          }
+      
+         form textarea{
+            height:15rem;
+            resize: none;
+            height: 100px;
+          }
+    
+          .bts{
+            display: inline-block;
+            margin-top: 1rem;
+            padding:.8rem 2.8rem;
+            border-radius: 5rem;
+            border-top-left-radius: 0;
+            border:.2rem solid #01111D;
+            cursor: pointer;
+            background: none;
+            color:#01111D;
+            font-size: 1.7rem;
+            overflow: hidden;
+            z-index: 0;
+            position: relative;
+            height: 50px;
+        }
+ .bts{
+    background-color: #fef5ac;
+    color:#01111D;
+    transition: .5s;
+    text-transform: capitalize;
+ }
+ .bts:hover{
+    background-color: #01111D;
+    color: #fef5ac;
+ }
+ .footer{
+    display: inline-flex;
+    background-color: #01111D;
+    width: 100%;
+    height: 100px;
+    border-radius: 350% 50px 00% 0% / 350% 50% 70% 80%;
+    
+ }
+  .foot{
+display: inline-flex;
+}
+  .credit{
+    display: flex;
+    align-self: flex-end;
+    margin-left: 40px;
+    text-transform: capitalize;
+    color:#fef5ac;
+    font-size: 15pt;
+    font-family: 'Didot';
+  }
+  .icons{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    align-items: baseline;
+    padding:10px;
+    margin-bottom: -20px;
+  }
+  .icons a{
+    text-decoration: none;
+    font-size: 15pt;
+    padding: 10px;
+    color: #25316d;
+    transition: .3s;
+  }
+  .icons a:hover{
+    color:#fef5ac;
+  }
+.sub{
+  position: relative;
+  height: 4em;
+  width: 100%;
+  background: #01111D;
+  border: none;
+  border-top: 3px solid #4070F4;
+  border-radius: 0 0 0.2em 0.2em;
+  color: #fef5ac;
+  font-family: 'Didot';
+  font-size: 1em;
+  transform-origin: 50% 5em;
+  transition: .5s;
+}
+.sub:hover{
+  cursor: pointer;
+  height: 5em;
+}
+.sub {
+  animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
